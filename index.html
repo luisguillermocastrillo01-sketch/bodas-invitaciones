@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina & Alejandro | Invitación Digital</title>
+    <meta name="description" content="Invitación digital de matrimonio con cuenta regresiva, galería, ubicación, música y confirmación por WhatsApp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!--
+        IMÁGENES QUE DEBES DESCARGAR Y GUARDAR EN assets/img/
+        1. hero-boda.jpg          -> foto principal de los novios o imagen elegante de boda
+        2. foto-novios-1.jpg      -> primera foto de galería
+        3. foto-novios-2.jpg      -> segunda foto de galería
+        4. foto-novios-3.jpg      -> tercera foto de galería
+        5. qr-invitacion.png      -> código QR de la invitación
+
+        AUDIO QUE DEBES GUARDAR EN assets/audio/
+        1. musica-boda.mp3        -> música de fondo para la invitación
+    -->
+
+    <header class="hero" id="inicio">
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#historia">Historia</a>
+            <a href="#detalles">Detalles</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#confirmar">Confirmar</a>
+            <a href="admin.html" class="nav__admin">Admin Demo</a>
+        </nav>
+
+        <button class="music-button" id="musicButton" aria-label="Activar o pausar música">♪</button>
+
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="hero__tag">¡Nos casamos!</p>
+            <h1>Carolina <span>&</span> Alejandro</h1>
+            <p class="hero__text">Queremos que seas parte de este día tan especial para nosotros.</p>
+
+            <div class="countdown" id="countdown">
+                <div><strong id="days">00</strong><span>Días</span></div>
+                <div><strong id="hours">00</strong><span>Horas</span></div>
+                <div><strong id="minutes">00</strong><span>Min</span></div>
+                <div><strong id="seconds">00</strong><span>Seg</span></div>
+            </div>
+
+            <a href="#confirmar" class="button button--gold">Confirmar asistencia</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section intro" id="historia">
+            <div class="container grid-2">
+                <div>
+                    <p class="section__eyebrow">Nuestra historia</p>
+                    <h2>Dos almas, un mismo destino</h2>
+                    <p>Después de tantos momentos compartidos, queremos celebrar nuestro amor rodeados de las personas que hacen parte de nuestra historia.</p>
+                    <p>Gracias por acompañarnos en este nuevo comienzo.</p>
+                </div>
+                <div class="polaroid">
+                    <img src="assets/img/foto-novios-1.png" alt="Foto de Carolina y Alejandro">
+                </div>
+            </div>
+        </section>
+
+        <section class="section details" id="detalles">
+            <div class="container">
+                <p class="section__eyebrow center">Detalles del evento</p>
+                <h2 class="center">Nuestra boda</h2>
+
+                <div class="cards">
+                    <article class="card">
+                        <span>📅</span>
+                        <h3>Fecha</h3>
+                        <p>24 de Agosto de 2026</p>
+                    </article>
+                    <article class="card">
+                        <span>🕔</span>
+                        <h3>Hora</h3>
+                        <p>5:00 PM</p>
+                    </article>
+                    <article class="card">
+                        <span>⛪</span>
+                        <h3>Ceremonia</h3>
+                        <p>Iglesia San Pedro, Medellín</p>
+                    </article>
+                    <article class="card">
+                        <span>🥂</span>
+                        <h3>Recepción</h3>
+                        <p>Hacienda Villa Real, Medellín</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery">
+            <div class="container">
+                <p class="section__eyebrow center">Galería principal</p>
+                <h2 class="center">Momentos especiales</h2>
+                <div class="gallery__grid">
+                    <img src="assets/img/foto-novios-1.png" alt="Foto destacada 1">
+                    <img src="assets/img/foto-novios-2.png" alt="Foto destacada 2">
+                    <img src="assets/img/foto-novios-3.png" alt="Foto destacada 3">
+                </div>
+            </div>
+        </section>
+
+        <section class="section location" id="ubicacion">
+            <div class="container grid-2">
+                <div>
+                    <p class="section__eyebrow">Ubicación</p>
+                    <h2>Te esperamos</h2>
+                    <p>La ceremonia y recepción se realizarán en Medellín. Puedes abrir la ubicación directamente desde Google Maps.</p>
+                    <a class="button" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Medellin+Colombia">Ver en Google Maps</a>
+                </div>
+
+                <div class="map-box">
+                    <iframe title="Mapa del evento" src="https://www.google.com/maps?q=Medellin%20Colombia&output=embed" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section multimedia">
+            <div class="container grid-2">
+                <div class="qr-box">
+                    <img src="assets/img/qr-invitacion.png" alt="Código QR de la invitación">
+                </div>
+                <div>
+                    <p class="section__eyebrow">Enlace compartible</p>
+                    <h2>Comparte nuestra invitación</h2>
+                    <p>Escanea el código QR o comparte esta invitación por WhatsApp, redes sociales o correo electrónico.</p>
+                    <button class="button" id="shareButton">Compartir invitación</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section confirm" id="confirmar">
+            <div class="container confirm__box">
+                <p class="section__eyebrow center">Confirma tu asistencia</p>
+                <h2 class="center">Nos encantará verte allí</h2>
+                <p class="center">Por favor confirma tu asistencia y el número de acompañantes permitidos.</p>
+
+                <form class="form" id="confirmForm">
+                    <input type="text" id="guestName" placeholder="Tu nombre completo" required>
+                    <select id="guestCount" required>
+                        <option value="">Cantidad de personas</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                    </select>
+                    <textarea id="guestMessage" placeholder="Mensaje para los novios (opcional)"></textarea>
+                    <button class="button button--gold" type="submit">Confirmar por WhatsApp</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Invitación digital creada por <strong>LY Digital Systems</strong></p>
+    </footer>
+
+    <audio id="weddingMusic" loop>
+        <source src="assets/audio/musica-boda.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

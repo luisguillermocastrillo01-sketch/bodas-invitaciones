@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Demo | Invitación Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="admin-body">
+
+    <!--
+        Este dashboard es una simulación frontend para Netlify.
+        No usa MySQL ni base de datos.
+        Los cambios se guardan temporalmente en localStorage del navegador.
+    -->
+
+    <aside class="sidebar">
+        <div class="sidebar__brand">
+            <strong>C & A</strong>
+            <span>Carolina & Alejandro</span>
+        </div>
+        <a class="active" href="#">Dashboard</a>
+        <a href="#infoEvento">Información del evento</a>
+        <a href="#galeriaAdmin">Galería de fotos</a>
+        <a href="#musicaAdmin">Música de fondo</a>
+        <a href="#qrAdmin">Código QR</a>
+        <a href="index.html">Ver invitación</a>
+    </aside>
+
+    <main class="admin-main">
+        <header class="admin-header">
+            <div>
+                <p>Panel de administración</p>
+                <h1>Hola, Carolina y Alejandro 👋</h1>
+            </div>
+            <div class="admin-header__actions">
+                <a class="button button--dark" href="index.html">Ver invitación</a>
+                <button class="button" id="copyLink">Copiar enlace</button>
+            </div>
+        </header>
+
+        <section class="admin-stats">
+            <article>
+                <span>Estado</span>
+                <strong>Activa</strong>
+                <p>Invitación publicada</p>
+            </article>
+            <article>
+                <span>Confirmaciones</span>
+                <strong>24</strong>
+                <p>Invitados confirmados</p>
+            </article>
+            <article>
+                <span>Cuenta regresiva</span>
+                <strong>125 días</strong>
+                <p>Tiempo estimado restante</p>
+            </article>
+            <article>
+                <span>Visitas</span>
+                <strong>312</strong>
+                <p>Vistas simuladas</p>
+            </article>
+        </section>
+
+        <section class="admin-grid">
+            <article class="admin-card" id="infoEvento">
+                <h2>Información del evento</h2>
+                <form class="admin-form" id="demoForm">
+                    <label>Nombres de los novios</label>
+                    <input type="text" id="coupleName" value="Carolina & Alejandro">
+
+                    <label>Fecha del evento</label>
+                    <input type="date" id="eventDate" value="2026-08-24">
+
+                    <label>Hora</label>
+                    <input type="time" id="eventHour" value="17:00">
+
+                    <label>Lugar</label>
+                    <input type="text" id="eventPlace" value="Hacienda Villa Real, Medellín">
+
+                    <button class="button button--gold" type="submit">Guardar cambios demo</button>
+                </form>
+            </article>
+
+            <article class="admin-card" id="galeriaAdmin">
+                <h2>Galería de fotos</h2>
+               
+                <div class="admin-gallery">
+                    <img src="assets/img/foto-novios-1.png" alt="Foto 1">
+                    <img src="assets/img/foto-novios-2.png" alt="Foto 2">
+                    <img src="assets/img/foto-novios-3.png" alt="Foto 3">
+                </div>
+            </article>
+
+            <article class="admin-card" id="musicaAdmin">
+                <h2>Música de fondo</h2>
+                <p>Archivo esperado:</p>
+                <strong>assets/audio/musica-boda.mp3</strong>
+                <p class="small">Puedes cambiarlo por cualquier canción, siempre que conserves ese nombre.</p>
+            </article>
+
+            <article class="admin-card" id="qrAdmin">
+                <h2>Código QR</h2>
+                <p>Archivo esperado:</p>
+                <strong>assets/img/qr-invitacion.png</strong>
+                <div class="admin-qr">
+                    <img src="assets/img/qr-invitacion.png" alt="QR invitación">
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
